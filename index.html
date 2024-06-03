@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>3D Rotating Image Gallery</title>
+</head>
+<body>
+    <div id="datetime">
+        
+    </div>
+    <h1>🎉Happy Marriage Anniversary🎉<br>🥳Mammy Papa🎂</h1>
+    <p>कहते हैं माता पिता से बढ़कर और कुछ भी नहीं,
+        आप दोनों मेरे लिए मेरी पूरी दुनिया हो !
+        आप दोनों को शादी की सालगिरह की बधाई !
+        आए खुशियों की बहार,
+        झूम उठे घर-संसार,
+        मुबारक हो आपको,
+        पचास सालों का प्यार।</p>
+
+   
+    <div class="box">
+
+        <span style="--i:1"><img src="./images/p8.jpeg"></span>
+        <span style="--i:2"><img src="./images/p4.jpeg"></span>
+        <span style="--i:3"><img src="./images/p3.jpeg"></span>
+        <span style="--i:4"><img src="./images/p5.jpeg"></span>
+        <span style="--i:5"><img src="./images/p11.jpeg"></span>
+        <span style="--i:6"><img src="./images/p2.jpeg"></span>
+        <span style="--i:7"><img src="./images/p10.jpg"></span>
+        <span style="--i:8"><img src="./images/p1.jpeg"></span>
+        <span style="--i:9"><img src="./images/p9.jpeg"></span>
+        <span style="--i:10"><img src="./images/p7.jpeg"></span>
+        <span style="--i:11"><img src="./images/p13.jpeg"></span>
+        <span style="--i:12"><img src="./images/p12.jpg"></span>
+        
+        
+    </div>
+
+     
+
+     <!-- Background Music -->
+     <!-- <audio id="background-music" autoplay loop>
+        <source src="./audio/Happy anniversary .mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio> -->
+
+    <!-- <<audio controls autoplay>
+       
+        <source src="./audio/Happy anniversary .mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio> -->
+
+      <audio id="background-music" src="./audio/In kadmo mein sanse varde .mp3" autoplay loop>
+        Your browser does not support the audio element.
+    </audio>
+
+    </div>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const dateTimeString = now.toLocaleString();
+            document.getElementById('datetime').textContent = dateTimeString;
+        }
+        // Update time initially and then every second
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    var audioElement = document.getElementById('background-music');
+    audioElement.play().catch(function(error) {
+        console.log('Autoplay was prevented by the browser.');
+    });
+
+    // Optional: Handling user interaction to play the audio if autoplay is blocked
+    document.body.addEventListener('click', function() {
+        if (audioElement.paused) {
+            audioElement.play();
+        }
+    });
+});
+    </script>
+
+
+    
+</body>
+</html>
